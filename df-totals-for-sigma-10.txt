@@ -1,0 +1,417 @@
+jchop@Sputnik:~$ cd Data_Analysis/
+jchop@Sputnik:~/Data_Analysis$ cd
+jchop@Sputnik:~$ cd py_DA_proj/
+jchop@Sputnik:~/py_DA_proj$ ipython
+Python 2.7.3 (default, Sep 26 2013, 20:03:06) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 0.12.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: ls
+131210_eiz_m0_DA.py           DA_eiz_SHIFTED_1_of_2.py  least_squares_demo.py
+131210_eiz_orig_DA.py         data/                     plots/
+DA_dF_m0_SHIFTED_2_of_2.py    DATA/
+DA_dF_orig_SHIFTED_2_of_2.py  Fig4b.pdf
+
+In [2]: run DA_dF_m0_SHIFTED_2_of_2.py
+Total F_nopeak = 14.8117155175 
+Total dF_042 = -2.21370714162 
+Total dF_062 = -1.25314599655 
+Total dF_082 = -0.819791664389 
+Total dF_102 = -0.52785768271 
+Total dF_132 = -0.278652569954 
+Total dF_182 = -0.0245149361991 
+Ratio dF_042/F_nopeak =  -0.149456498742 
+Ratio dF_062/F_nopeak =  -0.0846050543616 
+Ratio dF_082/F_nopeak =  -0.0553475161887 
+Ratio dF_102/F_nopeak =  -0.0356378491124 
+Ratio dF_132/F_nopeak =  -0.0188129841965 
+Ratio dF_182/F_nopeak =  -0.00165510444553 
+^C
+---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+/usr/lib/python2.7/dist-packages/IPython/utils/py3compat.pyc in execfile(fname, *where)
+    173             else:
+    174                 filename = fname
+--> 175             __builtin__.execfile(filename, *where)
+
+/home/jchop/py_DA_proj/DA_dF_m0_SHIFTED_2_of_2.py in <module>()
+    319 pl.xlabel(r'$1/\omega_{0}$')
+    320 
+--> 321 pl.show()
+    322 pl.close()
+    323 pp.close()
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in show(*args, **kw)
+    137     """
+    138     global _show
+--> 139     _show(*args, **kw)
+    140 
+    141 
+
+/usr/lib/pymodules/python2.7/matplotlib/backend_bases.pyc in __call__(self, block)
+    107 
+    108         if not is_interactive():
+--> 109             self.mainloop()
+    110 
+    111     def mainloop(self):
+
+/usr/lib/pymodules/python2.7/matplotlib/backends/backend_tkagg.pyc in mainloop(self)
+     67 class Show(ShowBase):
+     68     def mainloop(self):
+---> 69         Tk.mainloop()
+     70 
+     71 show = Show()
+
+/usr/lib/python2.7/lib-tk/Tkinter.pyc in mainloop(n)
+    326 def mainloop(n=0):
+    327     """Run the main loop of Tcl."""
+--> 328     _default_root.tk.mainloop(n)
+    329 
+    330 getint = int
+
+KeyboardInterrupt: 
+
+In [3]: 
+
+In [3]: ls
+131210_eiz_m0_DA.py           DA_eiz_SHIFTED_1_of_2.py  least_squares_demo.py
+131210_eiz_orig_DA.py         data/                     plots/
+DA_dF_m0_SHIFTED_2_of_2.py    DATA/
+DA_dF_orig_SHIFTED_2_of_2.py  Fig4b.pdf
+
+In [4]: run 131210_e
+131210_eiz_m0_DA.py    131210_eiz_orig_DA.py  
+
+In [4]: run 131210_eiz_orig_DA.py
+
+In [5]: rrun DA
+DAILY                         DA_dF_orig_SHIFTED_2_of_2.py
+DATA/                         DA_eiz_SHIFTED_1_of_2.py
+DA_dF_m0_SHIFTED_2_of_2.py    
+
+In [5]: run DA
+DATA/                         DA_dF_orig_SHIFTED_2_of_2.py
+DA_dF_m0_SHIFTED_2_of_2.py    DA_eiz_SHIFTED_1_of_2.py
+
+In [5]: run DA_
+DA_dF_m0_SHIFTED_2_of_2.py    DA_eiz_SHIFTED_1_of_2.py
+DA_dF_orig_SHIFTED_2_of_2.py  
+
+In [5]: run DA_d
+DA_dF_m0_SHIFTED_2_of_2.py    DA_dF_orig_SHIFTED_2_of_2.py
+
+In [5]: run DA_dF_orig_SHIFTED_2_of_2.py
+Total F_nopeak = 14.3036618156 
+Total dF_042 = -2.22024283888 
+Total dF_062 = -1.29612433239 
+Total dF_082 = -0.814473330733 
+Total dF_102 = -0.522070119275 
+Total dF_132 = -0.251218596767 
+Total dF_182 = -0.00325688933864 
+Ratio dF_042/F_nopeak =  -0.155221989131 
+Ratio dF_062/F_nopeak =  -0.0906148613622 
+Ratio dF_082/F_nopeak =  -0.0569415958817 
+Ratio dF_102/F_nopeak =  -0.0364990535994 
+Ratio dF_132/F_nopeak =  -0.0175632366037 
+Ratio dF_182/F_nopeak =  -0.000227696192809 
+
+In [6]: run DA_dF_orig_SHIFTED_2_of_2.py
+Total F_nopeak = 14.3036618156 
+Total dF_042 = -2.22024283888 
+Total dF_062 = -1.29612433239 
+Total dF_082 = -0.814473330733 
+Total dF_102 = -0.522070119275 
+Total dF_132 = -0.251218596767 
+Total dF_182 = -0.00325688933864 
+Ratio dF_042/F_nopeak =  -0.155221989131 
+Ratio dF_062/F_nopeak =  -0.0906148613622 
+Ratio dF_082/F_nopeak =  -0.0569415958817 
+Ratio dF_102/F_nopeak =  -0.0364990535994 
+Ratio dF_132/F_nopeak =  -0.0175632366037 
+Ratio dF_182/F_nopeak =  -0.000227696192809 
+
+In [7]: run d
+dF_plots.py  data/        
+
+In [7]: run dF_plots.py
+
+In [8]: run dF_plots.py
+
+In [9]: run dF_plots.py
+
+In [10]: quit()
+jchop@Sputnik:~/py_DA_proj$ ipython
+Python 2.7.3 (default, Sep 26 2013, 20:03:06) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 0.12.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: run dF_plots.py
+
+In [2]: run dF_plots.py
+
+In [3]: run dF_plots.py
+
+In [4]: run dF_plots.py
+
+In [5]: run dF_plots.py
+---------------------------------------------------------------------------
+IOError                                   Traceback (most recent call last)
+/usr/lib/python2.7/dist-packages/IPython/utils/py3compat.pyc in execfile(fname, *where)
+    173             else:
+    174                 filename = fname
+--> 175             __builtin__.execfile(filename, *where)
+
+/home/jchop/py_DA_proj/dF_plots.py in <module>()
+     48 Aiz_182_m0 = np.loadtxt('data/Aiz_m0_182.txt', unpack=True, usecols = [0])
+     49 
+---> 50 dAiz_npk_or = np.loadtxt('data/dAiz_or_npk.txt', unpack=True, usecols = [0])
+     51 dAiz_042_or = np.loadtxt('data/dAiz_or_042.txt', unpack=True, usecols = [0])
+     52 dAiz_062_or = np.loadtxt('data/dAiz_or_062.txt', unpack=True, usecols = [0])
+
+/usr/lib/python2.7/dist-packages/numpy/lib/npyio.pyc in loadtxt(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin)
+    688                 fh = iter(bz2.BZ2File(fname))
+    689             else:
+--> 690                 fh = iter(open(fname, 'U'))
+    691         else:
+    692             fh = iter(fname)
+
+IOError: [Errno 2] No such file or directory: 'data/dAiz_or_npk.txt'
+
+In [6]: run dF_plots.py
+
+In [7]: run 131210_eiz_
+131210_eiz_m0_DA.py    131210_eiz_m1_DA.py    131210_eiz_orig_DA.py
+
+In [7]: run 131210_eiz_m1_DA.py
+
+In [8]: run DA_dF_m1_SHIFTED_2_of_2.py
+Total F_nopeak = 14.8316972203 
+Total dF_042 = -2.17089577871 
+Total dF_062 = -1.22706409869 
+Total dF_082 = -0.78029784746 
+Total dF_102 = -0.504667309613 
+Total dF_132 = -0.206002138054 
+Total dF_182 = 0.00822493130124 
+Ratio dF_042/F_nopeak =  -0.146368668836 
+Ratio dF_062/F_nopeak =  -0.0827325477637 
+Ratio dF_082/F_nopeak =  -0.0526101521539 
+Ratio dF_102/F_nopeak =  -0.034026268344 
+Ratio dF_132/F_nopeak =  -0.0138893165761 
+Ratio dF_182/F_nopeak =  0.000554550917477 
+
+In [9]: run dF_plots.py
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+/usr/lib/python2.7/dist-packages/IPython/utils/py3compat.pyc in execfile(fname, *where)
+    173             else:
+    174                 filename = fname
+--> 175             __builtin__.execfile(filename, *where)
+
+/home/jchop/py_DA_proj/dF_plots.py in <module>()
+    104 pl.plot(n,eiz_182_m0, linestyle = '--', color='k')
+    105 
+--> 106 pl.plot(n,eiz_npk_m1, linestyle = '--', color='b')
+    107 pl.plot(n,eiz_042_m1, linestyle = '--', color='c')
+    108 pl.plot(n,eiz_062_m1, linestyle = '--', color='r')
+
+NameError: name 'eiz_npk_m1' is not defined
+
+In [10]: run dF_plots.py
+
+In [11]: run 131210_eiz_m2_DA.py
+
+In [12]: run DA_dF_m2_SHIFTED_2_of_2.py
+Total F_nopeak = 14.8096384137 
+Total dF_042 = -2.22068029292 
+Total dF_062 = -1.3309097049 
+Total dF_082 = -0.850496130156 
+Total dF_102 = -0.54696868305 
+Total dF_132 = -0.261318220015 
+Total dF_182 = -0.0261885275828 
+Ratio dF_042/F_nopeak =  -0.149948312774 
+Ratio dF_062/F_nopeak =  -0.0898678055283 
+Ratio dF_082/F_nopeak =  -0.057428554729 
+Ratio dF_102/F_nopeak =  -0.0369332908591 
+Ratio dF_132/F_nopeak =  -0.0176451451896 
+Ratio dF_182/F_nopeak =  -0.00176834348357 
+
+In [13]: run dF_plots.py
+
+In [14]: run dF_plots.py
+
+In [15]: run dF_plots.py
+
+In [16]: run dF_plots.py
+
+In [17]: run dF_plots.py
+
+In [18]: run dF_plots.py
+
+In [19]: run 131210_eiz_m0_DA.py
+
+In [20]: run DA_dF_m0_SHIFTED_2_of_2.py
+Total F_nopeak = 14.77683344 
+Total dF_042 = -2.24654155198 
+Total dF_062 = -1.31213853075 
+Total dF_082 = -0.824018484571 
+Total dF_102 = -0.583408263307 
+Total dF_132 = -0.341067502468 
+Total dF_182 = -0.0334537016641 
+Ratio dF_042/F_nopeak =  -0.152031323971 
+Ratio dF_062/F_nopeak =  -0.0887970035042 
+Ratio dF_082/F_nopeak =  -0.0557642128077 
+Ratio dF_102/F_nopeak =  -0.0394812776145 
+Ratio dF_132/F_nopeak =  -0.0230812307558 
+Ratio dF_182/F_nopeak =  -0.00226392899399 
+
+In [21]: run dF_plots.py
+
+In [22]: run 131210_eiz_m0_DA.py
+
+In [23]: run DA_dF_m0_SHIFTED_2_of_2.py
+Total F_nopeak = 14.7968918605 
+Total dF_042 = -2.23780261769 
+Total dF_062 = -1.31527724398 
+Total dF_082 = -0.821549151234 
+Total dF_102 = -0.520753115292 
+Total dF_132 = -0.236265594253 
+Total dF_182 = -0.0751379426574 
+Ratio dF_042/F_nopeak =  -0.151234640273 
+Ratio dF_062/F_nopeak =  -0.088888751528 
+Ratio dF_082/F_nopeak =  -0.0555217378742 
+Ratio dF_102/F_nopeak =  -0.0351934122517 
+Ratio dF_132/F_nopeak =  -0.0159672447754 
+Ratio dF_182/F_nopeak =  -0.00507795443567 
+
+In [24]: run dF_plots.py
+
+In [25]: run 131210_eiz_orig_DA.py
+
+In [26]: run 131210_eiz_m0_DA.py
+
+In [27]: run 131210_eiz_m1_DA.py
+
+In [28]: run 131210_eiz_m2_DA.py
+
+In [29]: run DA_dF_m0_SHIFTED_2_of_2.py
+Total F_nopeak = 14.8122630277 
+Total dF_042 = -2.18854666775 
+Total dF_062 = -1.38693366391 
+Total dF_082 = -0.846676978754 
+Total dF_102 = -0.521584148995 
+Total dF_132 = -0.246463220785 
+Total dF_182 = 0.0106714254974 
+Ratio dF_042/F_nopeak =  -0.14775234977 
+Ratio dF_062/F_nopeak =  -0.0936341503873 
+Ratio dF_082/F_nopeak =  -0.0571605417194 
+Ratio dF_102/F_nopeak =  -0.0352129953417 
+Ratio dF_132/F_nopeak =  -0.016639133421 
+Ratio dF_182/F_nopeak =  0.000720445314632 
+
+In [30]: run DA_dF_m1_SHIFTED_2_of_2.py
+Total F_nopeak = 14.827955657 
+Total dF_042 = -2.19747921386 
+Total dF_062 = -1.26126912063 
+Total dF_082 = -0.804591600155 
+Total dF_102 = -0.501911954403 
+Total dF_132 = -0.196365413023 
+Total dF_182 = 0.0333049368845 
+Ratio dF_042/F_nopeak =  -0.148198393945 
+Ratio dF_062/F_nopeak =  -0.0850602166477 
+Ratio dF_082/F_nopeak =  -0.0542618024201 
+Ratio dF_102/F_nopeak =  -0.0338490325984 
+Ratio dF_132/F_nopeak =  -0.0132429188194 
+Ratio dF_182/F_nopeak =  0.00224609094166 
+
+In [31]: run DA_dF_m2_SHIFTED_2_of_2.py
+Total F_nopeak = 14.80804137 
+Total dF_042 = -2.19623767343 
+Total dF_062 = -1.31463578299 
+Total dF_082 = -0.798729440382 
+Total dF_102 = -0.569767608933 
+Total dF_132 = -0.289412884318 
+Total dF_182 = -0.083326897099 
+Ratio dF_042/F_nopeak =  -0.148313853166 
+Ratio dF_062/F_nopeak =  -0.0887785055527 
+Ratio dF_082/F_nopeak =  -0.0539388984961 
+Ratio dF_102/F_nopeak =  -0.0384769055337 
+Ratio dF_132/F_nopeak =  -0.019544305495 
+Ratio dF_182/F_nopeak =  -0.00562713832417 
+
+In [32]: run dF_plots.py
+
+In [33]: run dF_plots.py
+---------------------------------------------------------------------------
+IndentationError                          Traceback (most recent call last)
+/usr/lib/python2.7/dist-packages/IPython/utils/py3compat.pyc in execfile(fname, *where)
+    173             else:
+    174                 filename = fname
+--> 175             __builtin__.execfile(filename, *where)
+
+IndentationError: unexpected indent (dF_plots.py, line 326)
+
+In [34]: run dF_plots.py
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+/usr/lib/python2.7/dist-packages/IPython/utils/py3compat.pyc in execfile(fname, *where)
+    173             else:
+    174                 filename = fname
+--> 175             __builtin__.execfile(filename, *where)
+
+/home/jchop/py_DA_proj/dF_plots.py in <module>()
+    326 
+    327 pl.axis([0,120,-0.0022,0.08])
+--> 328 pl.xlabel(r'$N$', si2ze = 21)
+    329 pl.ylabel(r'$\delta\mathcal{A}\mathrm{(i\zeta_{N})/k _{B} T}$', size = 21)
+    330 pl.savefig('plots/dAiz_sigma10.png', dpi = 300)
+
+/usr/lib/pymodules/python2.7/matplotlib/pyplot.pyc in xlabel(s, *args, **kwargs)
+   1176             For information on how override and the optional args work
+   1177     """
+-> 1178     l =  gca().set_xlabel(s, *args, **kwargs)
+   1179     draw_if_interactive()
+   1180     return l
+
+/usr/lib/pymodules/python2.7/matplotlib/axes.pyc in set_xlabel(self, xlabel, fontdict, labelpad, **kwargs)
+   3218         """
+   3219         if labelpad is not None: self.xaxis.labelpad = labelpad
+-> 3220         return self.xaxis.set_label_text(xlabel, fontdict, **kwargs)
+   3221 
+   3222     def get_ylabel(self):
+
+/usr/lib/pymodules/python2.7/matplotlib/axis.pyc in set_label_text(self, label, fontdict, **kwargs)
+   1368         self.label.set_text(label)
+   1369         if fontdict is not None: self.label.update(fontdict)
+-> 1370         self.label.update(kwargs)
+   1371         return self.label
+   1372 
+
+/usr/lib/pymodules/python2.7/matplotlib/artist.pyc in update(self, props)
+    657             func = getattr(self, 'set_'+k, None)
+    658             if func is None or not callable(func):
+--> 659                 raise AttributeError('Unknown property %s'%k)
+    660             func(v)
+    661             changed = True
+
+AttributeError: Unknown property si2ze
+
+In [35]: run dF_plots.py
+
+In [36]: run dF_plots.py
+
+In [37]: run dF_plots.py
+
+In [38]: run dF_plots.py
+
+In [39]: 
+
